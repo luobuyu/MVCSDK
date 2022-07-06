@@ -6,7 +6,7 @@ void run_single_instance(const string& ins_str) {
 	Environment env(ins_str);
 	Solve solve(env, cfg);
 	solve.run();
-	solve.record_sol(env.solution_path());
+	//solve.record_sol(env.solution_path());
 }
 
 void run_all_instances() {
@@ -17,20 +17,21 @@ void run_all_instances() {
 }
 
 int main(int argc, char* argv[]) {
-	if (argc != 2)
-	{
-		cerr << "Error parameter. See 'placement.exe timeout random_seed'." << endl;
-	}
-	else if (argc == 1)
+	if (argc == 2)
 	{
 		// 后面不跟任何参数的时候，全部运行
 		cout << "Run all instances..." << endl;
 		run_all_instances();
 	}
-	else if (argc == 2)
+	else if (argc == 3)
 	{
 		// 后面跟样例的路径的时候，只运行一个样例
 		run_single_instance(argv[1]);
+	}
+	else
+	{
+		string ins_name = "ca-hollywood-2009";
+		run_single_instance(ins_name);
 	}
 	return 0;
 }

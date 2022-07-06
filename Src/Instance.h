@@ -7,8 +7,11 @@
 #include <string>
 #include "Utils.h"
 #include "Config.h"
+#include "Struct.h"
 using namespace std;
-
+using namespace utils;
+using namespace fast_io;
+using namespace Debug;
 class Environment {
 
 private:
@@ -38,22 +41,53 @@ private:
 class Instance {
 
 private:
+	// 下标从 1 开始
 	const Environment& _env; // 样例的配置路径
-
+	int* head;				 // [1, node_num]
+	Edge* edge;				 // [1, edge_num]
+	int node_num, edge_num;
+	ll edge_cnt;
 public:
 	Instance(const Environment& env) : _env(env) { read_instance(); }
-
+	~Instance()
+	{
+		delete[] head;
+		delete[] edge;
+	}
 
 private:
 	void read_instance() {
-		ifstream ifs(_env.instance_path());
-		if (!ifs.is_open()) {
+		// 重定向到stdin
+		// 1069126 1069126 56306653
+		ios::sync_with_stdio(false);
+		cin.tie(0);
+		if (freopen(_env.instance_path().c_str(), "r", stdin) == NULL) {
 			cerr << "Error instance path: can not open " << _env.instance_path() << endl;
 			return;
 		}
+		read(node_num, node_num, edge_num);
+		new_memory(node_num, edge_num);
+		for (int i = 1, u, v; i <= edge_num; ++i)
+		{
+			read(u, v);
+			add_edge(u, v);
+			add_edge(v, u);
+		}
 	}
 
-	
+	void new_memory(int n, int m)
+	{
+		head = new int[n + 10]();
+		edge = new Edge[ll(m * 2 + 10)]();
+		edge_cnt = 0;
+	}
+
+	inline void add_edge(int u, int v)
+	{
+		edge[++edge_cnt] = { u, v, head[u] };
+		head[u] = edge_cnt;
+	}
+
 };
 
 #endif // !_SRC_INSTANCE_H_

@@ -25,7 +25,8 @@ public:
 	Solve() = delete;
 
 	Solve(const Environment& env, const Config& cfg) :
-		_env(env), _cfg(cfg), _ins(env), _gen(_cfg.random_seed), timer(cfg.timeout)
+		_env(env), _cfg(cfg), _ins(env), _gen(_cfg.random_seed), timer(cfg.timeout),
+		_duration(0), _iteration(0)
 		 {}	// 把 _obj_area初始化为最大值
 
 	void run() {

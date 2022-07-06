@@ -30,26 +30,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -156,6 +156,94 @@
     <ClInclude Include="Solve.h" />
     <ClInclude Include="Struct.h" />
     <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Deploy\Instance\bio-dmela.txt" />
+    <Text Include="..\Deploy\Instance\bio-yeast.txt" />
+    <Text Include="..\Deploy\Instance\ca-AstroPh.txt" />
+    <Text Include="..\Deploy\Instance\ca-citeseer.txt" />
+    <Text Include="..\Deploy\Instance\ca-coauthors-dblp.txt" />
+    <Text Include="..\Deploy\Instance\ca-CondMat.txt" />
+    <Text Include="..\Deploy\Instance\ca-CSphd.txt" />
+    <Text Include="..\Deploy\Instance\ca-dblp-2010.txt" />
+    <Text Include="..\Deploy\Instance\ca-dblp-2012.txt" />
+    <Text Include="..\Deploy\Instance\ca-Erdos992.txt" />
+    <Text Include="..\Deploy\Instance\ca-GrQc.txt" />
+    <Text Include="..\Deploy\Instance\ca-HepPh.txt" />
+    <Text Include="..\Deploy\Instance\ca-hollywood-2009.txt" />
+    <Text Include="..\Deploy\Instance\ca-MathSciNet.txt" />
+    <Text Include="..\Deploy\Instance\ia-email-EU.txt" />
+    <Text Include="..\Deploy\Instance\ia-email-univ.txt" />
+    <Text Include="..\Deploy\Instance\ia-enron-large.txt" />
+    <Text Include="..\Deploy\Instance\ia-fb-messages.txt" />
+    <Text Include="..\Deploy\Instance\ia-reality.txt" />
+    <Text Include="..\Deploy\Instance\ia-wiki-Talk.txt" />
+    <Text Include="..\Deploy\Instance\inf-power.txt" />
+    <Text Include="..\Deploy\Instance\inf-roadNet-CA.txt" />
+    <Text Include="..\Deploy\Instance\inf-roadNet-PA.txt" />
+    <Text Include="..\Deploy\Instance\rec-amazon.txt" />
+    <Text Include="..\Deploy\Instance\sc-ldoor.txt" />
+    <Text Include="..\Deploy\Instance\sc-msdoor.txt" />
+    <Text Include="..\Deploy\Instance\sc-nasasrb.txt" />
+    <Text Include="..\Deploy\Instance\sc-pkustk11.txt" />
+    <Text Include="..\Deploy\Instance\sc-pkustk13.txt" />
+    <Text Include="..\Deploy\Instance\sc-pwtk.txt" />
+    <Text Include="..\Deploy\Instance\sc-shipsec1.txt" />
+    <Text Include="..\Deploy\Instance\sc-shipsec5.txt" />
+    <Text Include="..\Deploy\Instance\soc-BlogCatalog.txt" />
+    <Text Include="..\Deploy\Instance\soc-brightkite.txt" />
+    <Text Include="..\Deploy\Instance\soc-buzznet.txt" />
+    <Text Include="..\Deploy\Instance\soc-delicious.txt" />
+    <Text Include="..\Deploy\Instance\soc-digg.txt" />
+    <Text Include="..\Deploy\Instance\soc-douban.txt" />
+    <Text Include="..\Deploy\Instance\soc-epinions.txt" />
+    <Text Include="..\Deploy\Instance\soc-flickr.txt" />
+    <Text Include="..\Deploy\Instance\soc-flixster.txt" />
+    <Text Include="..\Deploy\Instance\soc-FourSquare.txt" />
+    <Text Include="..\Deploy\Instance\soc-gowalla.txt" />
+    <Text Include="..\Deploy\Instance\soc-lastfm.txt" />
+    <Text Include="..\Deploy\Instance\soc-livejournal.txt" />
+    <Text Include="..\Deploy\Instance\soc-LiveMocha.txt" />
+    <Text Include="..\Deploy\Instance\soc-pokec.txt" />
+    <Text Include="..\Deploy\Instance\soc-slashdot.txt" />
+    <Text Include="..\Deploy\Instance\soc-twitter-follows.txt" />
+    <Text Include="..\Deploy\Instance\soc-youtube-snap.txt" />
+    <Text Include="..\Deploy\Instance\soc-youtube.txt" />
+    <Text Include="..\Deploy\Instance\socfb-A-anon.txt" />
+    <Text Include="..\Deploy\Instance\socfb-B-anon.txt" />
+    <Text Include="..\Deploy\Instance\socfb-Berkeley13.txt" />
+    <Text Include="..\Deploy\Instance\socfb-CMU.txt" />
+    <Text Include="..\Deploy\Instance\socfb-Duke14.txt" />
+    <Text Include="..\Deploy\Instance\socfb-Indiana.txt" />
+    <Text Include="..\Deploy\Instance\socfb-MIT.txt" />
+    <Text Include="..\Deploy\Instance\socfb-OR.txt" />
+    <Text Include="..\Deploy\Instance\socfb-Penn94.txt" />
+    <Text Include="..\Deploy\Instance\socfb-Stanford3.txt" />
+    <Text Include="..\Deploy\Instance\socfb-Texas84.txt" />
+    <Text Include="..\Deploy\Instance\socfb-UCLA.txt" />
+    <Text Include="..\Deploy\Instance\socfb-UConn.txt" />
+    <Text Include="..\Deploy\Instance\socfb-UCSB37.txt" />
+    <Text Include="..\Deploy\Instance\socfb-UF.txt" />
+    <Text Include="..\Deploy\Instance\socfb-UIllinois.txt" />
+    <Text Include="..\Deploy\Instance\socfb-Wisconsin87.txt" />
+    <Text Include="..\Deploy\Instance\tech-as-caida2007.txt" />
+    <Text Include="..\Deploy\Instance\tech-as-skitter.txt" />
+    <Text Include="..\Deploy\Instance\tech-internet-as.txt" />
+    <Text Include="..\Deploy\Instance\tech-p2p-gnutella.txt" />
+    <Text Include="..\Deploy\Instance\tech-RL-caida.txt" />
+    <Text Include="..\Deploy\Instance\tech-routers-rf.txt" />
+    <Text Include="..\Deploy\Instance\tech-WHOIS.txt" />
+    <Text Include="..\Deploy\Instance\web-arabic-2005.txt" />
+    <Text Include="..\Deploy\Instance\web-BerkStan.txt" />
+    <Text Include="..\Deploy\Instance\web-edu.txt" />
+    <Text Include="..\Deploy\Instance\web-google.txt" />
+    <Text Include="..\Deploy\Instance\web-indochina-2004.txt" />
+    <Text Include="..\Deploy\Instance\web-it-2004.txt" />
+    <Text Include="..\Deploy\Instance\web-sk-2005.txt" />
+    <Text Include="..\Deploy\Instance\web-spam.txt" />
+    <Text Include="..\Deploy\Instance\web-uk-2005.txt" />
+    <Text Include="..\Deploy\Instance\web-webbase-2001.txt" />
+    <Text Include="..\Deploy\Instance\web-wikipedia2009.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

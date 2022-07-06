@@ -76,7 +76,7 @@ namespace fast_io
         static char buf[1000000], * p1 = buf, * p2 = buf;
         return p1 == p2 && (p2 = (p1 = buf) + fread(buf, 1, 1000000, stdin), p1 == p2) ? EOF : *p1++;
     }
-#define getch getchar
+#define getch nextChar
     template <class T>
     inline void read(T& x)
     {
@@ -152,9 +152,7 @@ namespace fast_io
 		{
 			cerr << "请输入表行或表头" << endl;
 		}
-
 	}
-
 } // namespace FAST_IO
 
 namespace Debug {

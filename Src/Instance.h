@@ -40,7 +40,7 @@ private:
 // 读取样例，并将样例处理后存起来
 class Instance {
 
-private:
+public:
 	// 下标从 1 开始
 	const Environment& _env; // 样例的配置路径
 	int* head;				 // [1, node_num]
@@ -59,8 +59,6 @@ private:
 	void read_instance() {
 		// 重定向到stdin
 		// 1069126 1069126 56306653
-		ios::sync_with_stdio(false);
-		cin.tie(0);
 		if (freopen(_env.instance_path().c_str(), "r", stdin) == NULL) {
 			cerr << "Error instance path: can not open " << _env.instance_path() << endl;
 			return;
@@ -87,7 +85,6 @@ private:
 		edge[++edge_cnt] = { u, v, head[u] };
 		head[u] = edge_cnt;
 	}
-
 };
 
 #endif // !_SRC_INSTANCE_H_

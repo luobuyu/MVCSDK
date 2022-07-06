@@ -178,6 +178,7 @@
     <Text Include="..\Deploy\Instance\ia-fb-messages.txt" />
     <Text Include="..\Deploy\Instance\ia-reality.txt" />
     <Text Include="..\Deploy\Instance\ia-wiki-Talk.txt" />
+    <Text Include="..\Deploy\Instance\in.txt" />
     <Text Include="..\Deploy\Instance\inf-power.txt" />
     <Text Include="..\Deploy\Instance\inf-roadNet-CA.txt" />
     <Text Include="..\Deploy\Instance\inf-roadNet-PA.txt" />

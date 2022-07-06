@@ -31,6 +31,7 @@ int main(int argc, char* argv[]) {
 	else
 	{
 		string ins_name = "ca-hollywood-2009";
+		//string ins_name = "in";
 		run_single_instance(ins_name);
 	}
 	return 0;

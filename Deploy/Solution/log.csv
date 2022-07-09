@@ -1,0 +1,7 @@
+instance,obj_node_num,randomSeed,obj_iterTimes,obj_time,all_time
+ia-enron-large,12781,100,8,125.691,5010.16
+ia-enron-large,12781,100,8,126.512,5010.61
+ca-MathSciNet,139954,100,18,4453.52,5034.93
+ia-enron-large,12781,100,8,153.653,5002.18
+ca-MathSciNet,139954,100,18,4012.48,5134.87
+ca-MathSciNet,139951,100,37,8159.5,20041

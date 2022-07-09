@@ -234,6 +234,7 @@
     <Text Include="..\Deploy\Instance\tech-RL-caida.txt" />
     <Text Include="..\Deploy\Instance\tech-routers-rf.txt" />
     <Text Include="..\Deploy\Instance\tech-WHOIS.txt" />
+    <Text Include="..\Deploy\Instance\test.txt" />
     <Text Include="..\Deploy\Instance\web-arabic-2005.txt" />
     <Text Include="..\Deploy\Instance\web-BerkStan.txt" />
     <Text Include="..\Deploy\Instance\web-edu.txt" />
@@ -245,6 +246,9 @@
     <Text Include="..\Deploy\Instance\web-uk-2005.txt" />
     <Text Include="..\Deploy\Instance\web-webbase-2001.txt" />
     <Text Include="..\Deploy\Instance\web-wikipedia2009.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Deploy\Solution\log.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

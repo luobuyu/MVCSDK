@@ -12,6 +12,7 @@ using namespace std;
 using namespace utils;
 using namespace fast_io;
 using namespace Debug;
+
 class Environment {
 
 private:
@@ -45,18 +46,27 @@ public:
 	const Environment& _env; // 样例的配置路径
 	int* head;				 // [1, node_num]
 	Edge* edge;				 // [1, edge_num]
+	int* deg;				 // [1, edge_num]
 	int node_num, edge_num;
+	int avg_deg;
 	ll edge_cnt;
 public:
-	Instance(const Environment& env) : _env(env) { read_instance(); }
+	Instance(const Environment& env) : _env(env), head(NULL), edge(NULL), deg(NULL),
+		node_num(0), edge_num(0), avg_deg(0), edge_cnt(0)
+	{
+		read_instance();
+	}
+
 	~Instance()
 	{
 		delete[] head;
 		delete[] edge;
+		delete[] deg;
 	}
 
 private:
-	void read_instance() {
+	void read_instance()
+	{
 		// 重定向到stdin
 		// 1069126 1069126 56306653
 		if (freopen(_env.instance_path().c_str(), "r", stdin) == NULL) {
@@ -65,19 +75,22 @@ private:
 		}
 		read(node_num, node_num, edge_num);
 		new_memory(node_num, edge_num);
+		ll all_deg = 0;
 		for (int i = 1, u, v; i <= edge_num; ++i)
 		{
 			read(u, v);
-			add_edge(u, v);
-			add_edge(v, u);
+			deg[u]++, deg[v]++;
+			all_deg += 2;
+			add_edge(u, v), add_edge(v, u);
 		}
+		avg_deg = all_deg / node_num;
 	}
 
 	void new_memory(int n, int m)
 	{
 		head = new int[n + 10]();
 		edge = new Edge[ll(m * 2 + 10)]();
-		edge_cnt = 0;
+		deg = new int[n + 10]();
 	}
 
 	inline void add_edge(int u, int v)

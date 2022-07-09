@@ -33,268 +33,279 @@
     <Filter Include="资源文件">
       <UniqueIdentifier>{9c37397e-3601-45bb-91f4-9e2ee381fc42}</UniqueIdentifier>
     </Filter>
+    <Filter Include="资源文件\Instance">
+      <UniqueIdentifier>{cb6ab794-5951-45a9-bdd9-92f44199898a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Deploy\Instance\bio-dmela.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\bio-yeast.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-AstroPh.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-citeseer.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-coauthors-dblp.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-CondMat.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-CSphd.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-dblp-2010.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-dblp-2012.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-Erdos992.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-GrQc.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-HepPh.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-hollywood-2009.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ca-MathSciNet.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ia-email-EU.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ia-email-univ.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ia-enron-large.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ia-fb-messages.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ia-reality.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\ia-wiki-Talk.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\inf-power.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\inf-roadNet-CA.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\inf-roadNet-PA.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\rec-amazon.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\sc-ldoor.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\sc-msdoor.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\sc-nasasrb.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\sc-pkustk11.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\sc-pkustk13.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\sc-pwtk.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\sc-shipsec1.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\sc-shipsec5.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-BlogCatalog.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-brightkite.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-buzznet.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-delicious.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-digg.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-douban.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-epinions.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-A-anon.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-B-anon.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-Berkeley13.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-CMU.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-Duke14.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-Indiana.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-MIT.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-OR.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-Penn94.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-Stanford3.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-Texas84.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-UCLA.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-UConn.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-UCSB37.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-UF.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-UIllinois.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\socfb-Wisconsin87.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-flickr.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-flixster.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-FourSquare.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-gowalla.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-lastfm.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-livejournal.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-LiveMocha.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-pokec.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-slashdot.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-twitter-follows.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-youtube.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\soc-youtube-snap.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\tech-as-caida2007.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\tech-as-skitter.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\tech-internet-as.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\tech-p2p-gnutella.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\tech-RL-caida.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\tech-routers-rf.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\tech-WHOIS.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\web-arabic-2005.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\web-BerkStan.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\web-edu.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\web-google.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\web-indochina-2004.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\web-it-2004.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\web-sk-2005.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\web-spam.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\web-uk-2005.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\web-webbase-2001.txt">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="..\Deploy\Instance\web-wikipedia2009.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
     <Text Include="..\Deploy\Instance\in.txt">
-      <Filter>资源文件</Filter>
+      <Filter>资源文件\Instance</Filter>
     </Text>
+    <Text Include="..\Deploy\Instance\inf-power.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\inf-roadNet-CA.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\inf-roadNet-PA.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\rec-amazon.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\sc-ldoor.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\sc-msdoor.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\sc-nasasrb.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\sc-pkustk11.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\sc-pkustk13.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\sc-pwtk.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\sc-shipsec1.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\sc-shipsec5.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-BlogCatalog.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-brightkite.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-buzznet.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-delicious.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-digg.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-douban.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-epinions.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-A-anon.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-B-anon.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-Berkeley13.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-CMU.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-Duke14.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-Indiana.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-MIT.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-OR.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-Penn94.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-Stanford3.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-Texas84.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-UCLA.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-UConn.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-UCSB37.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-UF.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-UIllinois.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\socfb-Wisconsin87.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-flickr.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-flixster.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-FourSquare.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-gowalla.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-lastfm.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-livejournal.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-LiveMocha.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-pokec.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-slashdot.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-twitter-follows.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-youtube.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\soc-youtube-snap.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\tech-as-caida2007.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\tech-as-skitter.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\tech-internet-as.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\tech-p2p-gnutella.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\tech-RL-caida.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\tech-routers-rf.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\tech-WHOIS.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\test.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\web-arabic-2005.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\web-BerkStan.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\web-edu.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\web-google.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\web-indochina-2004.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\web-it-2004.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\web-sk-2005.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\web-spam.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\web-uk-2005.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\web-webbase-2001.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+    <Text Include="..\Deploy\Instance\web-wikipedia2009.txt">
+      <Filter>资源文件\Instance</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Deploy\Solution\log.csv">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

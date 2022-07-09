@@ -10,7 +10,7 @@
 #include <iomanip>
 #include <random>
 #include <chrono>
-using namespace std;
+
 namespace utils {
 
 	using namespace std;
@@ -57,7 +57,7 @@ namespace utils {
 			return std::chrono::duration<double, std::milli>(Clock::now() - startTime).count();
 		}
 	};
-	
+
 	static void split_filename(const string& str, string& dir, string& file, string& id) {
 		size_t found1 = str.find_last_of("/\\");
 		size_t found2 = str.find_last_of("_");
@@ -68,49 +68,50 @@ namespace utils {
 	}
 }
 
-
 namespace fast_io
 {
-    inline char nextChar()
-    {
-        static char buf[1000000], * p1 = buf, * p2 = buf;
-        return p1 == p2 && (p2 = (p1 = buf) + fread(buf, 1, 1000000, stdin), p1 == p2) ? EOF : *p1++;
-    }
+	using namespace std;
+
+	inline char nextChar()
+	{
+		static char buf[1000000], * p1 = buf, * p2 = buf;
+		return p1 == p2 && (p2 = (p1 = buf) + fread(buf, 1, 1000000, stdin), p1 == p2) ? EOF : *p1++;
+	}
 #define getch nextChar
-    template <class T>
-    inline void read(T& x)
-    {
-        T flag = 1;
-        x = 0;
-        char ch = getch();
-        while (ch < '0' || ch > '9')
-        {
-            if (ch == '-')
-                flag = -1;
-            ch = getch();
-        }
-        while (ch >= '0' && ch <= '9')
-        {
-            x = (x << 3) + (x << 1) + (ch ^ 48), ch = getch();
-        }
-        x *= flag;
-    }
+	template <class T>
+	inline void read(T& x)
+	{
+		T flag = 1;
+		x = 0;
+		char ch = getch();
+		while (ch < '0' || ch > '9')
+		{
+			if (ch == '-')
+				flag = -1;
+			ch = getch();
+		}
+		while (ch >= '0' && ch <= '9')
+		{
+			x = (x << 3) + (x << 1) + (ch ^ 48), ch = getch();
+		}
+		x *= flag;
+	}
 
-    template <class T, class... _T>
-    inline void read(T& x, _T &...y)
-    {
-        return read(x), read(y...);
-    }
+	template <class T, class... _T>
+	inline void read(T& x, _T &...y)
+	{
+		return read(x), read(y...);
+	}
 
-    template <class T>
-    inline void print128(T x)
-    {
-        if (x < 0)
-            putchar('-'), x = -x;
-        if (x > 9)
-            print128(x / 10);
-        putchar(x % 10 + '0');
-    }
+	template <class T>
+	inline void print128(T x)
+	{
+		if (x < 0)
+			putchar('-'), x = -x;
+		if (x > 9)
+			print128(x / 10);
+		putchar(x % 10 + '0');
+	}
 
 	enum class LineType
 	{
@@ -139,12 +140,12 @@ namespace fast_io
 		log_file.seekp(0, ios::end);
 		if (is_same<T, LineType>::value && x == LineType::HEAD)
 		{
-			if (log_file.tellp() <= 0) 
+			if (log_file.tellp() <= 0)
 			{
 				writeStream(log_file, y...);
 			}
 		}
-		else if(is_same<T, LineType>::value && x == LineType::LINE)
+		else if (is_same<T, LineType>::value && x == LineType::LINE)
 		{
 			writeStream(log_file, y...);
 		}
@@ -156,6 +157,7 @@ namespace fast_io
 } // namespace FAST_IO
 
 namespace Debug {
+	using namespace std;
 #define DEBUG
 #ifdef DEBUG
 #define eprintf(x) fprintf(stderr, x)
@@ -305,7 +307,6 @@ namespace utils_visualize_drawer {
 		RandColor rc;
 	};
 }
-
 
 #endif // !_SRC_UTILS_H_
 

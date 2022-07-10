@@ -36,6 +36,9 @@
     <Filter Include="资源文件\Instance">
       <UniqueIdentifier>{cb6ab794-5951-45a9-bdd9-92f44199898a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{38e34e5a-1a1c-4b00-9905-5ffbf7cb67df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Deploy\Instance\bio-dmela.txt">
@@ -306,6 +309,9 @@
   <ItemGroup>
     <None Include="..\Deploy\Solution\log.csv">
       <Filter>资源文件</Filter>
+    </None>
+    <None Include="test.py">
+      <Filter>Test</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -249,6 +249,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Deploy\Solution\log.csv" />
+    <None Include="test.py" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

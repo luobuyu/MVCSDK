@@ -31,6 +31,14 @@ namespace utils {
 			strftime(mbstr, sizeof(mbstr), "%y%m%d%H%M%S", localtime(&now));
 			return mbstr;
 		}
+		// 返回日期的格式化字符串，年/月/日 时:分:秒
+		static string to_format_str()
+		{
+			time_t now = time(nullptr);
+			char mbstr[100];
+			strftime(mbstr, sizeof(mbstr), "%y/%m/%d %H:%M:%S", localtime(&now));
+			return mbstr;
+		}
 	};
 
 	class Timer {
@@ -54,7 +62,7 @@ namespace utils {
 		}
 		double getDuration()
 		{
-			return std::chrono::duration<double, std::milli>(Clock::now() - startTime).count();
+			return std::chrono::duration<double>(Clock::now() - startTime).count();
 		}
 	};
 
@@ -113,47 +121,19 @@ namespace fast_io
 		putchar(x % 10 + '0');
 	}
 
-	enum class LineType
-	{
-		HEAD, LINE
-	};
-
 	template <class T>
-	inline void writeStream(ofstream& out, T x)
+	inline void writeStream(T x)
 	{
-		out << x << endl;
+		cerr << x << endl;
 	}
 
 	template <class T, class... _T>
-	inline void writeStream(ofstream& out, T x, _T ...y)
+	inline void writeStream(T x, _T ...y)
 	{
-		out << x << ",";
-		writeStream(out, y...);
+		cerr << x << ",";
+		writeStream(y...);
 	}
 
-	// 写入日志文件，参数 路径，表头还是行数据，具体内容
-	// 文件为空才会创建表头，否则的话
-	template <class T, class... _T>
-	inline void writeLog(string logPath, T x, _T ...y)
-	{
-		ofstream log_file(logPath, ios::app);
-		log_file.seekp(0, ios::end);
-		if (is_same<T, LineType>::value && x == LineType::HEAD)
-		{
-			if (log_file.tellp() <= 0)
-			{
-				writeStream(log_file, y...);
-			}
-		}
-		else if (is_same<T, LineType>::value && x == LineType::LINE)
-		{
-			writeStream(log_file, y...);
-		}
-		else
-		{
-			cerr << "请输入表行或表头" << endl;
-		}
-	}
 } // namespace FAST_IO
 
 namespace Debug {
@@ -173,13 +153,15 @@ namespace Debug {
 	template <class printable>
 	void trace(const char* name, printable&& value)
 	{
-		cerr << name << " = " << value << endl;
+		if (name[0] == '"') cerr << value << endl;
+		else cerr << name << " = " << value << endl;
 	}
 	template <class printable, class ...args>
 	void trace(const char* names, printable&& value, args &&...list)
 	{
 		const char* separate = strchr(names + 1, ',');
-		cerr.write(names, separate - names) << " = " << value << ',';
+		if (names[0] == '"') cerr << value << ',';
+		else cerr.write(names, separate - names) << " = " << value << ',';
 		trace(separate + 1, list...);
 	}
 }

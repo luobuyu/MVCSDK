@@ -4,8 +4,7 @@
 #include "Instance.h"
 #include "Utils.h"
 
-using namespace utils;
-using namespace fast_io;
+using namespace Debug;
 
 class Solve {
 
@@ -263,7 +262,7 @@ public:
 	{
 		if (freopen(sol_path.c_str(), "w", stdout) == NULL) 
 		{
-			cerr << "Error instance path: can not open " << sol_path << endl;
+			cerr << "Error solution path: can not open " << sol_path << endl;
 			return;
 		}
 		record_sol();
@@ -289,23 +288,27 @@ public:
 		cout << endl;
 	}
 
+	// 写入日志文件，不传参数为写入标准错误流
 	void record_log(const string& log_path)
 	{
 		if (freopen(log_path.c_str(), "a", stderr) == NULL)
 		{
-			cerr << "Error instance path: can not open " << log_path << endl;
+			cerr << "Error log path: can not open " << log_path << endl;
 			return;
 		}
-		record_log();
+		ofstream log_file(log_path, ios::app);
+		log_file.seekp(0, ios::end);
+		if (log_file.tellp() <= 0) { record_log_header(); }
+		record_log_data();
 	}
-	// 写入日志文件
+
+	// 写入标准错误流
 	void record_log()
 	{
-		// 写入表头
-		writeLog(_env.log_path(), LineType::HEAD, "instance", "obj_node_num", "randomSeed", "obj_iterTimes", "obj_time", "all_time");
-		// 写入行数据
-		writeLog(_env.log_path(), LineType::LINE, _env.instance_name(), best_sol.size(), _cfg.random_seed, _iteration, _duration, timer.getDuration());
+		record_log_header();
+		record_log_data();
 	}
+
 
 	/// 检查结果是否正确
 	bool check()
@@ -322,6 +325,17 @@ public:
 		return true;
 	}
 private:
+	void record_log_header()
+	{
+		writeStream("date", "instance", "obj_node_num", "randomSeed",
+			"obj_iterTimes", "obj_time", "all_time");
+	}
+
+	void record_log_data()
+	{
+		writeStream(Date::to_format_str(), _env.instance_name(), best_sol.size(), _cfg.random_seed,
+			_iteration, _duration, timer.getDuration());
+	}
 
 	int rand(int lb, int ub) { return _gen() % (ub - lb) + lb; } // [lb, ub-1]
 

@@ -4,7 +4,6 @@
 /*
 * 该文件，编写一些需要用到的数据结构，数据类型等
 */
-#define ll long long
 using namespace std;
 struct Edge
 {
@@ -16,19 +15,22 @@ struct SetInt
 private:
 	int* index;		// 元素在element中的下标，不存在时为 0
 	int* element;	// 元素 [1,cnt]
-	int cnt;		// 元素个数
+	int cnt;		// 元素个数 [1, max_size]
+	int max_size;   // 元素容量
 public:
 	SetInt()
 	{
 		index = NULL;
 		element = NULL;
 		cnt = 0;
+		max_size = 0;
 	}
 	SetInt(int maxSize)
 	{
 		index = new int[maxSize + 10]();
 		element = new int[maxSize + 10]();
 		cnt = 0;
+		max_size = maxSize + 10 - 1;
 	}
 	~SetInt()
 	{
@@ -41,10 +43,20 @@ public:
 	//形参调用析构函数时会将同一块地址的delete掉，后面就会出错
 	SetInt& operator=(const SetInt& s) 
 	{
+		if (max_size < s.max_size)
+		{
+			delete[] index;
+			delete[] element;
+			index = new int[s.max_size + 1];
+			element = new int[s.max_size + 1];
+		}
 		for (int i = 1; i <= s.size(); ++i)
 		{
 			element[i] = s.element[i];
-			index[element[i]] = s.index[element[i]];
+		}
+		for (int i = 1; i <= s.max_size; ++i)
+		{
+			index[i] = s.index[i];
 		}
 		cnt = s.cnt;
 		return *this;

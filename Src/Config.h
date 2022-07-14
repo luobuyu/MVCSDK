@@ -19,7 +19,7 @@ static const char* ins_list[]{
 struct Config {
 	unsigned int random_seed;
 	int timeout = 3600;  // ³¬Ê±Ê±¼ä
-	int delta = 1;
+	int delta = 10;
 	Config():timeout(3600)
 	{
 		random_seed = std::random_device{}();

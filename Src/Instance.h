@@ -49,7 +49,7 @@ public:
 	int* deg;				 // [1, edge_num]
 	int node_num, edge_num;
 	int avg_deg;
-	ll edge_cnt;
+	long long edge_cnt;
 public:
 	Instance(const Environment& env) : _env(env), head(NULL), edge(NULL), deg(NULL),
 		node_num(0), edge_num(0), avg_deg(0), edge_cnt(0)
@@ -75,7 +75,7 @@ private:
 		}
 		read(node_num, node_num, edge_num);
 		new_memory(node_num, edge_num);
-		ll all_deg = 0;
+		long long all_deg = 0;
 		for (int i = 1, u, v; i <= edge_num; ++i)
 		{
 			read(u, v);
@@ -89,7 +89,7 @@ private:
 	void new_memory(int n, int m)
 	{
 		head = new int[n + 10]();
-		edge = new Edge[ll(m * 2 + 10)]();
+		edge = new Edge[(long long)(m * 2 + 10)]();
 		deg = new int[n + 10]();
 	}
 

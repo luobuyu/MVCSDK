@@ -5,6 +5,8 @@
 #include <cstdio>
 #include <string>
 #include <sstream>
+#include <algorithm>
+#include <cstring>
 #include <fstream>
 #include <ctime>
 #include <iomanip>

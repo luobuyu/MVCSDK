@@ -316,7 +316,7 @@ public:
 		for (int i = 1; i <= _ins.edge_num; i = i + 2)
 		{
 			auto& edge = _ins.edge[i];
-			if (!sol.exist(edge.u) && !sol.exist(edge.v))
+			if (!best_sol.exist(edge.u) && !best_sol.exist(edge.v))
 			{
 				cerr << "求解失败，存在不能覆盖的边" << endl;
 				return false;

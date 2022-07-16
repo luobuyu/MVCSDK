@@ -9,7 +9,7 @@ void run_single_instance(const Environment& env)
 	solve.run();
 
 	solve.record_log();
-
+	solve.check();
 	solve.record_sol();
 }
 

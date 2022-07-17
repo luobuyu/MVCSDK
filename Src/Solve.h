@@ -172,7 +172,7 @@ public:
 		_duration = timer.getDuration();
 		_iteration = iter;
 		record = best_sol.size();
-		while (!timer.isTimeout() && best_sol.size() != 864052)
+		while (!timer.isTimeout())
 		{
 			iter++;
 			random_shuffle(node + 1, node + 1 + _ins.node_num);

@@ -85,7 +85,7 @@ public:
 					if (min_deg > _ins.deg[NI[i]])
 					{
 						u = NI[i];
-						min_deg = _ins.deg[NI[i]];
+						min_deg = _ins.deg[u];
 					}
 				}
 			}
@@ -118,10 +118,9 @@ public:
 			if (sol.exist(v))
 			{
 				NE_size[v]++;
-				if (NE_size[v] == 1) NE_only[v] = u;
-				else if (NE_size[v] > 1) NE_only[v] = 0;
-				// 这里可以更新 NM
 				NI.erase(v);
+				NE_only[v] = u;
+				// 这里可以更新 NM
 			}
 		}
 	}
@@ -129,13 +128,25 @@ public:
 	inline void sol_insert_update(int u)
 	{
 		sol.insert(u); // 插入了 u 
+		NE_size[u] = 0;
+		NE_only[u] = 0;
 		for (int i = _ins.head[u]; i; i = _ins.edge[i].next)
 		{
 			int v = _ins.edge[i].v;
-			if (sol.exist(v))
+			if (!sol.exist(v))
+			{
+				NE_size[u]++;
+				NE_only[u] = v;
+			}
+			else
 			{
 				NE_size[v]--;
-				if (NE_size[v] == 1)
+				if (NE_size[v] == 0)
+				{
+					NI.insert(v);
+					NE_only[v] = 0;
+				}
+				else if (NE_only[v] == u)
 				{
 					// 要确定 NE(v)_only 是啥
 					for (int j = _ins.head[v]; j; j = _ins.edge[j].next)
@@ -148,13 +159,6 @@ public:
 						}
 					}
 				}
-				else if (NE_size[v] == 0) { NI.insert(v); }
-			}
-			else
-			{
-				NE_size[u]++;
-				if (NE_size[u] == 1) NE_only[u] = v;
-				else if(NE_size[u] > 1) NE_only[u] = 0;
 			}
 		}
 		if (NE_size[u] == 0) NI.insert(u);
@@ -165,6 +169,8 @@ public:
 		int iter = 0;
 		init_solution();
 		best_sol = sol;
+		_duration = timer.getDuration();
+		_iteration = iter;
 		record = best_sol.size();
 		while (!timer.isTimeout() && best_sol.size() != 864052)
 		{
@@ -219,7 +225,6 @@ public:
 				}
 			}
 			record = best_sol.size();
-
 			tmp_sol = sol;
 			tmp_NI = NI;
 			for (int j = 1; j <= _ins.node_num; ++j)
@@ -337,7 +342,7 @@ private:
 
 	int rand(int ub) { return uniform_int_distribution<int>(1, ub)(_gen); } // [1, ub]
 
-	double rand() { return uniform_real_distribution<double>(0, 1)(_gen); }
+	//double rand() { return uniform_real_distribution<double>(0, 1)(_gen); }
 
 };
 #endif // !_SRC_SOLVE_H_

@@ -7,6 +7,7 @@ void run_single_instance(const Environment& env)
 	Solve solve(env, cfg);
 	solve.run();
 	solve.record_log();
+	solve.check();
 	solve.record_sol();
 }
 
@@ -27,9 +28,9 @@ int main(int argc, char* argv[])
 		string ins_name = "ca-hollywood-2009";
 		//string ins_name = "ca-CSphd";
 		//string ins_name = "sc-pkustk13";
-		//string ins_name = "test";
+		//string ins_name = "in";
 		cfg.random_seed = 11076;
-		cfg.timeout = 300;
+		cfg.timeout = 1000;
 		cfg.delta = 1;
 		Environment env(ins_name);
 		if (freopen(env.instance_path().c_str(), "r", stdin) == NULL) {

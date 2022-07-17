@@ -38,9 +38,9 @@ public:
 		delete[] element;
 	}
 
-	int& operator[](int i) { return element[i]; }
+	inline int& operator[](int i) { return element[i]; }
 	// 参数不加引用时，浅拷贝，会把成员变量的地址拷贝过来，
-	//形参调用析构函数时会将同一块地址的delete掉，后面就会出错
+	// 形参调用析构函数时会将同一块地址的delete掉，后面就会出错
 	SetInt& operator=(const SetInt& s) 
 	{
 		if (max_size < s.max_size)
@@ -63,13 +63,13 @@ public:
 	}
 	int get_index(int u) { return index[u]; }
 
-	void insert(int u)	// 插入一个新顶点
+	inline void insert(int u)	// 插入一个新顶点
 	{
 		if (index[u] != 0) return;
 		element[++cnt] = u;
 		index[u] = cnt;
 	}
-	void erase(int u)	// 删除顶点
+	inline void erase(int u)	// 删除顶点
 	{
 		if (index[u] == 0) return;
 		index[element[cnt]] = index[u];
@@ -101,11 +101,11 @@ public:
 		cnt = 0;
 	}
 
-	int size() const { return cnt; }
+	inline int size() const { return cnt; }
 	int* begin() const { return element + 1; }
 	int* end() const { return element + cnt + 1; }
-	bool exist(int u) { return index[u] != 0; }
-	bool empty() { return cnt == 0; }
+	inline bool exist(int u) { return index[u] != 0; }
+	inline bool empty() { return cnt == 0; }
 };
 
 #endif // !_SRC_STRUCT_H_

@@ -69,10 +69,6 @@ private:
 	{
 		// 重定向到stdin
 		// 1069126 1069126 56306653
-		if (freopen(_env.instance_path().c_str(), "r", stdin) == NULL) {
-			cerr << "Error instance path: can not open " << _env.instance_path() << endl;
-			return;
-		}
 		read(node_num, node_num, edge_num);
 		new_memory(node_num, edge_num);
 		long long all_deg = 0;

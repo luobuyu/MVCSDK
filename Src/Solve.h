@@ -105,7 +105,7 @@ public:
 		}
 	}
 
-	void sol_erase_update(int u)
+	inline void sol_erase_update(int u)
 	{
 		sol.erase(u);
 		NI.erase(u);
@@ -114,8 +114,7 @@ public:
 		// 更新 NI,NE，删去了结点 u
 		for (int i = _ins.head[u]; i; i = _ins.edge[i].next)
 		{
-			auto& edge = _ins.edge[i];
-			int v = edge.v; // v in sol, u not in sol
+			int v = _ins.edge[i].v; // v in sol, u not in sol
 			if (sol.exist(v))
 			{
 				NE_size[v]++;
@@ -127,13 +126,12 @@ public:
 		}
 	}
 
-	void sol_insert_update(int u)
+	inline void sol_insert_update(int u)
 	{
 		sol.insert(u); // 插入了 u 
 		for (int i = _ins.head[u]; i; i = _ins.edge[i].next)
 		{
-			auto& edge = _ins.edge[i];
-			int v = edge.v;
+			int v = _ins.edge[i].v;
 			if (sol.exist(v))
 			{
 				NE_size[v]--;
@@ -142,8 +140,7 @@ public:
 					// 要确定 NE(v)_only 是啥
 					for (int j = _ins.head[v]; j; j = _ins.edge[j].next)
 					{
-						auto& edge = _ins.edge[j];
-						int nev = edge.v;
+						int nev = _ins.edge[j].v;
 						if (!sol.exist(nev))
 						{
 							NE_only[v] = nev;
@@ -169,13 +166,13 @@ public:
 		init_solution();
 		best_sol = sol;
 		record = best_sol.size();
-		while (!timer.isTimeout()) 
+		while (!timer.isTimeout() && best_sol.size() != 864052)
 		{
 			iter++;
 			random_shuffle(node + 1, node + 1 + _ins.node_num);
-			for (int i = 1; i <= _ins.node_num; ++i)
+			for (int i = 1, u, v; i <= _ins.node_num; ++i)
 			{
-				int v = node[i];
+				v = node[i];
 				if (sol.exist(v))
 				{
 					if (NE_size[v] == 0)
@@ -190,7 +187,7 @@ public:
 					}
 					else if (NE_size[v] == 1 && tabu[v] < iter)
 					{
-						int u = NE_only[v];
+						u = NE_only[v];
 						sol_erase_update(v);
 						sol_insert_update(u);
 						tabu[u] = iter;
@@ -202,8 +199,7 @@ public:
 					NM_size = 0;
 					for (int j = _ins.head[v]; j; j = _ins.edge[j].next)
 					{
-						auto& edge = _ins.edge[j];
-						int u = edge.v;
+						u = _ins.edge[j].v;
 						if (sol.exist(u) && NE_size[u] == 1)
 						{
 							NM[++NM_size] = u;
@@ -211,7 +207,7 @@ public:
 					}
 					if (NM_size > 0 && tabu[v] < iter)
 					{
-						int u = NM[rand(NM_size)];
+						u = NM[rand(NM_size)];
 						sol_erase_update(u);
 						sol_insert_update(v);
 						tabu[v] = iter;
@@ -231,10 +227,10 @@ public:
 				tmp_NE_size[j] = NE_size[j];
 				tmp_NE_only[j] = NE_only[j];
 			}
-
+			int u = 0;
 			while (!NI.empty())
 			{
-				int u = NI[rand(NI.size())];
+				u = NI[rand(NI.size())];
 				sol_erase_update(u);
 			}
 			if (sol.size() < best_sol.size())
@@ -327,19 +323,19 @@ public:
 private:
 	void record_log_header()
 	{
-		writeStream("date", "instance", "obj_node_num", "randomSeed",
+		writeStream("date", "instance", "delta", "obj_node_num", "randomSeed",
 			"obj_iterTimes", "obj_time", "all_time");
 	}
 
 	void record_log_data()
 	{
-		writeStream(Date::to_format_str(), _env.instance_name(), best_sol.size(), _cfg.random_seed,
+		writeStream(Date::to_format_str(), _env.instance_name(), cfg.delta, best_sol.size(), _cfg.random_seed,
 			_iteration, _duration, timer.getDuration());
 	}
 
-	int rand(int lb, int ub) { return _gen() % (ub - lb) + lb; } // [lb, ub-1]
+	int rand(int lb, int ub) { return uniform_int_distribution<int>(lb, ub - 1)(_gen); } // [lb, ub - 1]
 
-	int rand(int ub) { return _gen() % ub + 1; } // [1, ub]
+	int rand(int ub) { return uniform_int_distribution<int>(1, ub)(_gen); } // [1, ub]
 
 	double rand() { return uniform_real_distribution<double>(0, 1)(_gen); }
 
